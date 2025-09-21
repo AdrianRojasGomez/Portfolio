@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
     <meta name="theme-color" content="#ffffff">
+    <script src="js/contact.js" defer></script>
 </head>
 
 <body>
+
     <header class="site-header">
         <div class="container header-inner">
-            <!-- Logo (reemplaza logo.svg por tu archivo) -->
             <a class="logo" href="#">
                 <img src="img/logo.png" alt="Logo personal" />
             </a>
@@ -22,15 +23,15 @@
             <nav class="main-nav" aria-label="Principal">
                 <ul>
                     <li><a href="#about">About me</a></li>
-                    <li><a href="#services">Experiences</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a class="btn btn-small" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
+
         <section id="about" class="hero">
             <div class="container hero-inner">
                 <h1 class="hero-title">¡Hola! Soy Adrian R.</h1>
@@ -43,6 +44,91 @@
                     end-to-end reliability.
                 </p>
             </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="experience-title">Experience</h2>
+            </div>
+            <ul class="experience-list">
+                <li class="experience-item">
+                    <figure class="card">
+                        <img src="img/exp/fnz.png" alt="FNZ" loading="lazy">
+                        <figcaption class="card__caption">FNZ — Analyst Tester</figcaption>
+                    </figure>
+                </li>
+
+                <li class="experience-item">
+                    <figure class="card">
+                        <img src="img/exp/shard.png" alt="Shardeum" loading="lazy">
+                        <figcaption class="card__caption">Shardeum — Quality Assurance Specialist</figcaption>
+                    </figure>
+                </li>
+
+                <li class="experience-item">
+                    <figure class="card">
+                        <img src="img/exp/nge.png" alt="NGE" loading="lazy">
+                        <figcaption class="card__caption">Nimble Giant — Senior QA Analyst </figcaption>
+                    </figure>
+                </li>
+
+                <li class="experience-item">
+                    <figure class="card">
+                        <img src="img/exp/tsb.png" alt="TSB" loading="lazy">
+                        <figcaption class="card__caption">The Sandbox — QA Analyst</figcaption>
+                    </figure>
+                </li>
+
+                <li class="experience-item">
+                    <figure class="card">
+                        <img src="img/exp/trafilea.png" alt="Trafilea" loading="lazy">
+                        <figcaption class="card__caption">Trafilea — SQA Engineer</figcaption>
+                    </figure>
+                </li>
+
+                <li class="experience-item">
+                    <figure class="card">
+                        <img src="img/exp/jc.png" alt="JC" loading="lazy">
+                        <figcaption class="card__caption">Jam City — QA Tester</figcaption>
+                    </figure>
+                </li>
+
+
+
+
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="contact">Contact Me</h2>
+            </div>
+
+            <form id = "contact-form" class="contact-form"
+                method="GET" >
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input id="name" name="Name" type="text" required placeholder="Your Full Name..." />
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input id="email" name="Email" type="email" required placeholder="your@email.com" />
+                </div>
+
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Enter your message..."
+                        required></textarea>
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox" id="consent" required />
+                    <span>I agree to be contacted by this addres.</span>
+                </label>
+
+                <button type="submit" class="btn">Send</button>
+                <p class="form-note">When you hit send, your default email application will open.</p>
+            </form>
         </section>
 
 
