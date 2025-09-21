@@ -16,7 +16,7 @@
 
     <header class="site-header">
         <div class="container header-inner">
-            <a class="logo" href="#">
+            <a class="logo" href="#about">
                 <img src="img/logo.png" alt="Logo personal" />
             </a>
 
@@ -24,6 +24,7 @@
                 <ul>
                     <li><a href="#about">About me</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a class="btn btn-small" href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -34,8 +35,8 @@
 
         <section id="about" class="hero">
             <div class="container hero-inner">
-                <h1 class="hero-title">¡Hola! Soy Adrian R.</h1>
-                <img class="hero-avatar" src="img/pfp.JPG" alt="Foto de Adrian Rojas" width="320" height="320">
+                <h1 class="hero-title">Hello! I'm Adrian R.</h1>
+                <img class="hero-avatar" src="img/pfp.jpg" alt="Foto de Adrian Rojas" width="320" height="320">
 
                 <p class="hero-text">
                     QA Engineer transitioning into .NET development, leveraging expertise in test automation, defect
@@ -54,57 +55,104 @@
                 <li class="experience-item">
                     <figure class="card">
                         <img src="img/exp/fnz.png" alt="FNZ" loading="lazy">
-                        <figcaption class="card__caption">FNZ — Analyst Tester</figcaption>
+                        <figcaption class="card-caption">FNZ — Analyst Tester</figcaption>
                     </figure>
                 </li>
 
                 <li class="experience-item">
                     <figure class="card">
                         <img src="img/exp/shard.png" alt="Shardeum" loading="lazy">
-                        <figcaption class="card__caption">Shardeum — Quality Assurance Specialist</figcaption>
+                        <figcaption class="card-caption">Shardeum — Quality Assurance Specialist</figcaption>
                     </figure>
                 </li>
 
                 <li class="experience-item">
                     <figure class="card">
                         <img src="img/exp/nge.png" alt="NGE" loading="lazy">
-                        <figcaption class="card__caption">Nimble Giant — Senior QA Analyst </figcaption>
+                        <figcaption class="card-caption">Nimble Giant — Senior QA Analyst </figcaption>
                     </figure>
                 </li>
 
                 <li class="experience-item">
                     <figure class="card">
                         <img src="img/exp/tsb.png" alt="TSB" loading="lazy">
-                        <figcaption class="card__caption">The Sandbox — QA Analyst</figcaption>
+                        <figcaption class="card-caption">The Sandbox — QA Analyst</figcaption>
                     </figure>
                 </li>
 
                 <li class="experience-item">
                     <figure class="card">
                         <img src="img/exp/trafilea.png" alt="Trafilea" loading="lazy">
-                        <figcaption class="card__caption">Trafilea — SQA Engineer</figcaption>
+                        <figcaption class="card-caption">Trafilea — SQA Engineer</figcaption>
                     </figure>
                 </li>
 
                 <li class="experience-item">
                     <figure class="card">
                         <img src="img/exp/jc.png" alt="JC" loading="lazy">
-                        <figcaption class="card__caption">Jam City — QA Tester</figcaption>
+                        <figcaption class="card-caption">Jam City — QA Tester</figcaption>
                     </figure>
                 </li>
-
-
-
-
+            </ul>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Projects</h2>
+
+                <ul class="project-grid">
+                    <li class="project-card">
+                        <a class="project-thumb" href="https://azokka.itch.io/rocky-way" target="_blank"
+                            rel="noopener noreferrer" aria-label="Open in new tab">
+                            <img src="img/prj/rocky.png" alt="rocky-way" width="800" height="450" loading="lazy">
+                        </a>
+                        <div class="project-body">
+                            <h3 class="project-title"><a href="https://azokka.itch.io/rocky-way" target="_blank"
+                                    rel="noopener noreferrer">Rocky Way</a></h3>
+                            <p class="project-desc">Relive the classic Asteroid with a few twist and more action packed
+                                than ever!</p>
+                        </div>
+                    </li>
+
+                    <li class="project-card">
+                        <a class="project-thumb"
+                            href="https://github.com/Estebangda09/Gestion_de_articulos_Programacion3_Grupo2_A"
+                            target="_blank" rel="noopener noreferrer" aria-label="Open in new tab">
+                            <img src="img/prj/winforms.jpeg" alt="Captura del Proyecto 3" width="800" height="450"
+                                loading="lazy">
+                        </a>
+                        <div class="project-body">
+                            <h3 class="project-title"><a
+                                    href="https://github.com/Estebangda09/Gestion_de_articulos_Programacion3_Grupo2_A"
+                                    target="_blank" rel="noopener noreferrer">Winforms TP</a></h3>
+                            <p class="project-desc">Winforms application for managing inventory in an online store.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-title">
             <div class="container">
                 <h2 class="contact">Contact Me</h2>
             </div>
 
-            <form id = "contact-form" class="contact-form"
-                method="GET" >
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/arojasgomez93/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <img src="img/soc/linkedin.png" alt="LinkedIn" width="62" height="62">
+                </a>
+
+                <a href="https://github.com/AdrianRojasGomez" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <img src="img/soc/github.png" alt="GitHub" width="62" height="62">
+                </a>
+
+
+            </div>
+
+
+            <form id="contact-form" class="contact-form" method="GET">
                 <div class="form-field">
                     <label for="name">Name</label>
                     <input id="name" name="Name" type="text" required placeholder="Your Full Name..." />
@@ -123,7 +171,7 @@
 
                 <label class="checkbox">
                     <input type="checkbox" id="consent" required />
-                    <span>I agree to be contacted by this addres.</span>
+                    <span>I agree to be contacted at this address.</span>
                 </label>
 
                 <button type="submit" class="btn">Send</button>
@@ -135,3 +183,5 @@
     </main>
 
 </body>
+
+</html>
