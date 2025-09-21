@@ -1,0 +1,199 @@
+/* ====== THEME (colores y escalas) ====== */
+:root {
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+    --clr-bg: #0D0D0D;
+    --clr-text: #BFBEAA;
+    --clr-primary: #D95B5B;
+    --clr-muted: #591419;
+    --clr-lines: rgba(255, 255, 255, 0.6);
+
+    --header-height: 64px;
+    /* alto del header */
+    --container-max: 1100px;
+    /* ancho máximo del contenido */
+    --radius: 18px;
+    /* bordes redondeados base */
+    --space: 16px;
+    /* espaciado base */
+}
+
+h1,h2,h3{ font-family: var(--font-serif); font-weight: 700; }
+
+/* Opcional: paleta automática en modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --clr-bg: #0D0D0D;
+        --clr-text: #BFBEAA;
+        --clr-primary: #D95B5B;
+        --clr-muted: #591419;
+        --clr-lines: rgba(255, 255, 255, 0.6);
+    }
+}
+
+
+/* Base */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--clr-bg);
+    color: var(--clr-text);
+}
+
+/* Contenedor reutilizable */
+.container {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--space);
+}
+
+/* ====== HEADER / NAV ====== */
+.site-header {
+    position: sticky;
+    /* se queda pegado cuando llegas a top */
+    top: 0;
+    z-index: 1000;
+    /* por encima del contenido */
+    height: var(--header-height);
+    background: var(--clr-bg);
+    border-bottom: 1px solid var(--clr-lines);
+    /* línea sutil */
+}
+
+.header-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo img {
+    height: calc(var(--header-height) - 20px);
+    width: auto;
+    display: block;
+}
+
+/* Nav */
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.main-nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-text);
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+}
+
+.main-nav a:hover {
+    background: var(--clr-muted);
+}
+
+/* Botón del menú */
+.btn {
+    background: var(--clr-primary);
+    color: #fff;
+    border-radius: .6rem;
+    padding: .6rem .9rem;
+    text-decoration: none;
+}
+
+.btn:hover {
+    filter: brightness(.95);
+}
+
+.btn-small {
+    padding: .4rem .7rem;
+    font-size: .9rem;
+}
+
+/* Que los anclajes (#about, #services, etc.) no queden ocultos por el header */
+section[id] {
+    scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+/* Ajustes en modo oscuro para el hover y el borde del header */
+@media (prefers-color-scheme: dark) {
+    .site-header {
+        border-bottom-color: var(--clr-lines);
+    }
+
+    .main-nav a:hover {
+        background: var(--clr-muted);
+    }
+}
+
+/* ====== HERO ====== */
+.hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding-block: clamp(2rem, 2vw, 5rem);
+    background: var(--clr-bg);
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 65ch;
+}
+
+.hero-avatar {
+    width: clamp(140px, 22vw, 180px);
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius);
+    object-fit: cover;
+    border: 1px solid transparent;
+    border-image: linear-gradient(45deg, var(--clr-primary), var(--clr-text)) 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    display: block;
+}
+
+/* Título grande y responsivo */
+.hero-title {
+    margin: .75rem 0 0;
+    line-height: 1.1;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    color: var(--clr-text);
+}
+
+/* Texto descriptivo */
+.hero-text {
+    margin: .5rem 0 0;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    opacity: .95;
+    /* sutil para jerarquía visual */
+}
+
+/* Llamados a la acción */
+.hero-cta {
+    display: flex;
+    gap: .75rem;
+    margin-top: .75rem;
+}
+
+/* Botón contorno (combina con tu .btn existente) */
+.btn-outline {
+    background: transparent;
+    color: var(--clr-text);
+    border: 1px solid var(--clr-lines);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, .06);
+    border-color: var(--clr-text);
+}
